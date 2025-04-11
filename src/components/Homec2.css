@@ -1,0 +1,125 @@
+/* Homec2.css */
+
+.container-homec2 {
+    padding: 40px 20px;
+    background-color: #f8fafc;
+    margin: 30px 0;
+    text-align: center;
+  }
+  
+  .container-homec2 h1 {
+    font-size: 2.2rem;
+    color: #1e3a8a;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  .container-homec2 h4 {
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  
+  .place-img {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .place-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .place-img img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .place-name {
+    color: #1e40af;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  /* Carousel arrows */
+  .react-multiple-carousel__arrow {
+    background: rgba(30, 64, 175, 0.7) !important;
+    z-index: 1;
+    min-width: 30px;
+    min-height: 30px;
+  }
+  
+  .react-multiple-carousel__arrow:hover {
+    background: #1e40af !important;
+  }
+  
+  .react-multiple-carousel__arrow::before {
+    font-size: 16px !important;
+    color: white !important;
+  }
+  
+  /* Left arrow position */
+  .react-multiple-carousel__arrow--left {
+    left: 0 !important;
+  }
+  
+  /* Right arrow position */
+  .react-multiple-carousel__arrow--right {
+    right: 0 !important;
+  }
+  
+  /* Carousel dots */
+  .react-multi-carousel-dot button {
+    border: 2px solid #1e40af !important;
+    background: transparent !important;
+    width: 12px !important;
+    height: 12px !important;
+  }
+  
+  .react-multi-carousel-dot--active button {
+    background: #1e40af !important;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container-homec2 {
+      padding: 30px 15px;
+    }
+    
+    .container-homec2 h1 {
+      font-size: 1.8rem;
+    }
+    
+    .container-homec2 h4 {
+      font-size: 1rem;
+    }
+    
+    .place-img {
+      padding: 10px;
+    }
+    
+    .place-name {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container-homec2 {
+      padding: 25px 10px;
+    }
+    
+    .react-multiple-carousel__arrow {
+      min-width: 25px;
+      min-height: 25px;
+    }
+  }

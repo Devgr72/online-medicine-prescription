@@ -1,0 +1,331 @@
+/* Layout */
+.medicine-page {
+  padding: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.search-container {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  padding: 12px 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-icon {
+  color: #888;
+  font-size: 18px;
+}
+
+/* Medicine Grid */
+.medicine-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.medicine-list {
+  flex: 3;
+}
+
+.medicine-list h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #2e7d32;
+}
+
+.medicine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Medicine Card */
+.medicine-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.medicine-card:hover {
+  transform: translateY(-5px);
+}
+
+.medicine-image {
+  height: 180px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medicine-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.medicine-details {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-details h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.medicine-details p {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.medicine-price {
+  color: #2e7d32;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.add-to-cart-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Cart Styling */
+.cart-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-icon {
+  margin-right: 10px;
+  font-size: 22px;
+  color: #2e7d32;
+}
+
+.cart-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 30px 0;
+  color: #888;
+  font-size: 16px;
+}
+
+.cart-items {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-info h4 {
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+
+.item-price {
+  font-size: 14px;
+  color: #2e7d32;
+}
+
+.item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-quantity button {
+  background-color: #f0f0f0;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.item-quantity button:hover {
+  background-color: #ddd;
+}
+
+.item-total {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #444;
+}
+
+/* Cart Total & Checkout */
+.cart-total {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.cart-total h3 {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.checkout-btn {
+  margin-top: 15px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .medicine-container {
+    flex-direction: column;
+  }
+
+  .cart-container {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+}
+.bottom-navigation {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+  padding: 0 20px;
+}
+
+.return-home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  border: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  gap: 0.5rem;
+}
+
+.return-home-button:hover {
+  background: linear-gradient(135deg, #6d28d9, #5b21b6);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+}
+
+@media (max-width: 480px) {
+  .bottom-navigation {
+    margin: 2rem 0;
+  }
+  .return-home-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

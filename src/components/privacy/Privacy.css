@@ -1,0 +1,224 @@
+/* Base Styles with Theme Enhancements */
+.privacy-container {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #2d3748;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #f1f5f9;
+  }
+  
+  /* Header */
+  .privacy-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .privacy-header:hover {
+    transform: translateY(-4px);
+  }
+  
+  .privacy-header h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .privacy-header p {
+    color: #e0e7ff;
+    font-size: 1rem;
+    opacity: 0.95;
+  }
+  
+  /* Content */
+  .privacy-content {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 3rem;
+    margin-top: -2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Sections */
+  .privacy-section {
+    margin-bottom: 2.5rem;
+    padding: 1.75rem;
+    border-left: 5px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .privacy-section:nth-child(even) {
+    background-color: #f1f5f9;
+  }
+  
+  .privacy-section:hover {
+    border-left-color: #4f46e5;
+    background-color: #eef2ff;
+    transform: scale(1.02);
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.1);
+  }
+  
+  .privacy-section h2 {
+    font-size: 1.6rem;
+    color: #1e293b;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .privacy-section h2::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #4f46e5;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .privacy-section p {
+    margin-bottom: 1rem;
+    font-size: 1.07rem;
+    color: #475569;
+  }
+  
+  .privacy-section ul {
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .privacy-section li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.75rem;
+    position: relative;
+    color: #475569;
+    transition: color 0.2s ease;
+  }
+  
+  .privacy-section li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4f46e5;
+    font-weight: bold;
+  }
+  
+  /* Footer */
+  .privacy-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+  
+  /* Links */
+  a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-bottom: 1px dashed transparent;
+    background-image: linear-gradient(120deg, #4f46e5, #7c3aed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  a:hover {
+    border-bottom-color: #7c3aed;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .privacy-container {
+      padding: 1.25rem;
+    }
+  
+    .privacy-header {
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  
+    .privacy-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .privacy-content {
+      padding: 2rem;
+    }
+  
+    .privacy-section {
+      padding: 1.2rem;
+    }
+  
+    .privacy-section h2 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .privacy-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .privacy-header p {
+      font-size: 0.95rem;
+    }
+  
+    .privacy-section h2 {
+      font-size: 1.2rem;
+    }
+  
+    .privacy-section p,
+    .privacy-section li {
+      font-size: 0.95rem;
+    }
+  }
+  .return-home-button {
+    display: inline-block;
+    margin: 2rem auto 0;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .return-home-button:hover {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3);
+  }
+  
+  @media (max-width: 480px) {
+    .return-home-button {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+  

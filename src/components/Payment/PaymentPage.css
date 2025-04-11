@@ -1,0 +1,63 @@
+.payment-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .payment-summary {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+  }
+  
+  .order-details {
+    margin-bottom: 2rem;
+  }
+  
+  .payment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .payment-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+  }
+  
+  .payment-methods {
+    margin-top: 2rem;
+  }
+  
+  .method-options {
+    margin-top: 1.5rem;
+  }
+  
+  .razorpay-btn {
+    background: #3182ce;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+  }
+  
+  .razorpay-btn:hover {
+    background: #2c5282;
+  }
+  
+  .razorpay-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }

@@ -1,0 +1,180 @@
+.checkout-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.checkout-container h1 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.items-section,
+.prescription-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.checkout-item:last-child {
+  border-bottom: none;
+}
+
+.medicine-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: #f7fafc;
+}
+
+.item-details h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2c5282;
+}
+
+.item-details p {
+  margin: 0.3rem 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.upload-box {
+  border: 2px dashed #cbd5e0;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-box:hover {
+  border-color: #3182ce;
+  background: #ebf8ff;
+}
+
+.upload-label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #2d3748;
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  color: #3182ce;
+  margin-bottom: 0.5rem;
+}
+
+.preview-container {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.prescription-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+}
+
+.change-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.change-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.order-summary {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.order-summary h2 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.proceed-btn, .back-btn {
+  background: #3182ce;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.proceed-btn:hover {
+  background: #2b6cb0;
+}
+
+.back-btn {
+  background: #4a5568;
+}
+
+.back-btn:hover {
+  background: #2d3748;
+}
+
+.proceed-btn:disabled {
+  background: #cbd5e0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #e53e3e;
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    text-align: center;
+  }
+
+  .proceed-btn, .back-btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
