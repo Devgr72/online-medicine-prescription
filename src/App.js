@@ -15,6 +15,7 @@ import Checkout from './components/CheckoutPage/CheckoutPage'
 import Payment from './components/Payment/PaymentPage'
 import Confirmation from './components/Confirmation/ConfirmationPage'
 import Admin from './components/admin/Admin'
+import History from './components/history/PurchaseHistory'
 function App() {
   return (
     
@@ -26,6 +27,7 @@ function App() {
   element={
     <ProtectedRoute>
       <Medicine />
+      
     </ProtectedRoute>
   } 
 />
@@ -35,6 +37,7 @@ function App() {
     <Route path='/privacy' element={<Privacy/>}/>
     <Route path='/terms' element={<Tos/>}/>
     <Route path='/admin' element={<Admin/>}/>
+    <Route path="/purchases" element={<History/>}/>
     <Route path="/confirmation" element={<Confirmation/>}/>
     <Route path="/checkout" element={<Checkout />} />
     <Route path='/medicine' element={<Medicine/>}/>

@@ -47,6 +47,7 @@
       setsubmitted(true);
       if (validateFields()) {
         try {
+          if(email=='admin@gmail.com' && pass=='admin123'){ navigate('/admin')}
           const response = await axios.post('http://localhost:8000/loginpage', { email, pass });
           if (response.status === 200 && response.data.status === 'Success') {
             const token = response.data.token;

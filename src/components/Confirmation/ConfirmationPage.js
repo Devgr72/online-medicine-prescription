@@ -8,34 +8,29 @@ function ConfirmationPage() {
   const { paymentId, orderId, cartItems, totalAmount } = location.state || {};
 
   useEffect(() => {
-  
     if (orderId && cartItems && totalAmount) {
-      sendConfirmationEmail();
+      sendOrderConfirmation();
     }
   }, [orderId, cartItems, totalAmount]);
 
-  const sendConfirmationEmail = async () => {
+  const sendOrderConfirmation = async () => {
     try {
-      const userEmail =  'devgr102@gmail.com';
-  
-      const response = await axios.post('http://localhost:8000/send-confirmation-email', {
-        email: userEmail,
+      const response = await axios.post('http://localhost:8000/send-order-confirmation', {
         orderId,
         paymentId,
         cartItems,
         totalAmount
       });
-  
+
       if (response.data.success) {
-        console.log('Confirmation email sent successfully');
+        console.log('Order details sent to admin successfully');
       } else {
-        console.error('Email sending failed:', response.data.error);
+        console.error('Failed to send order details:', response.data.error);
       }
     } catch (error) {
-      console.error('Failed to send confirmation email:', error);
+      console.error('Error sending order details:', error);
     }
   };
-  
 
   return (
     <div className="confirmation-container">
@@ -60,7 +55,7 @@ function ConfirmationPage() {
         </div>
 
         <p className="email-note">
-          A confirmation has been sent to your email address.
+          The order details have been sent to the admin.
         </p>
         
         <button 
